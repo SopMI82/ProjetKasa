@@ -2,8 +2,7 @@ import Card from "./Card";
 
 const Gallery = () => {
     return (
-        <div>
-            <h3>Gallerie</h3>
+        <div className="galery">
             <Card/>
         </div>
     );

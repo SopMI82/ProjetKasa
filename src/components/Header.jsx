@@ -2,10 +2,10 @@ import NavBar from "./NavBar";
 
 const Header = () => {
     return (
-        <div>
+        <header>
             <img src="" alt="logo Kasa" />
             <NavBar/>
-        </div>
+        </header>
     );
 };
 
