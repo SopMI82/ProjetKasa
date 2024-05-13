@@ -1,8 +1,11 @@
+import './Banner.css';
+
 const Banner = () => {
     return (
-      <banner>
+      <div className="banner">
+        <img src=".\src\assets\image.png" alt="Paysage marin" />
         <p>Chez vous, partout et ailleurs</p>
-      </banner>
+      </div>
     );
 };
 
