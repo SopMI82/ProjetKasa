@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Profile from "./pages/Profile";
-import Error404 from "./pages/Error404";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Profile from "./pages/Profile/Profile";
+import Error404 from "./pages/Error404/Error404";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
