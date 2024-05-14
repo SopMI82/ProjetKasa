@@ -1,0 +1,35 @@
+.erreur404 {
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.erreur404 h2 {
+    display: flex;
+    color: #FF6060;
+    font-size: 260px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.erreur404 p {
+    display: flex;
+    color: #FF6060;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.erreur404 a {
+    display: flex;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration-line: underline;
+}
