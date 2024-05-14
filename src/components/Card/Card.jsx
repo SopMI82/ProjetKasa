@@ -1,4 +1,5 @@
 const Card = () => {
+  
   return (
     <a href="#">
       <figure className="housingCard">
