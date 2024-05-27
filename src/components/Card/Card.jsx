@@ -1,12 +1,18 @@
+<<<<<<< Updated upstream
 const Card = () => {
+=======
+import { Link } from "react-router-dom";
+import "./Card.scss";
+
+export const Card = (prop) => {
+>>>>>>> Stashed changes
   return (
-    <a href="#">
-      <figure className="housingCard">
-        <img src="" alt="photo du logement" />
-        <h3>titre</h3>
-      </figure>
-    </a>
+    <Link
+      to={`profile/${prop.housing.id}`}
+      className="housingCard"
+    >
+      <p>{prop.housing.title}</p>
+      <img src={prop.housing.cover} alt="photo du logement" />
+    </Link>
   );
 };
-
-export default Card;

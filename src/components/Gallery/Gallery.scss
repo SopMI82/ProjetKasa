@@ -1,0 +1,11 @@
+.galery {
+    max-width: 1240px;
+    border-radius: 25px;
+    background: #F6F6F6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 50px;
+    gap: 60px;
+}
+
