@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
-const Card = () => {
-=======
 import { Link } from "react-router-dom";
 import "./Card.scss";
 
 export const Card = (prop) => {
->>>>>>> Stashed changes
   return (
     <Link
       to={`profile/${prop.housing.id}`}

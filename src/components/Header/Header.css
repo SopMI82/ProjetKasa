@@ -1,0 +1,19 @@
+header {
+    width: 100%;
+    max-width: 1240px;
+    height: 68px;
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    width: 210px;
+    height: 68px;
+}
+
+.app {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+}
