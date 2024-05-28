@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import housings from "../../data/logements.json";
+import Drawer from "../../components/Drawer/Drawer";
 
 const Profile = () => {
   const { id } = useParams();
@@ -23,12 +24,7 @@ const Profile = () => {
         })}
       </div>
 
-      <div className="detail">
-        <title>{house.description}</title>
-        <i className="arrow"></i>
-        <p>jhgdjhgjlfhjbfjh</p>
-      </div>
-
+      {<Drawer title={"Decription :"} content={house.description} />}
     </div>
   );
 };
