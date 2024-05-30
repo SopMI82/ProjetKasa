@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const Drawer = ({ drawerTitle = "", drawerContent = "" }) => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Drawer = ({ drawerTitle = "", drawerContent = "" }) => {
 };
 
 export default Drawer;
+
 
 /*ici on vérifie si drawerContent est un tableau
 (fonction ajoutée pour la liste des équipements)

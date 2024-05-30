@@ -5,7 +5,11 @@ import "./Home.scss";
 const Home = () => {
   return (
     <div className="container">
-      <Banner />
+      <Banner
+        imgSource=".\src\assets\image.png"
+        text="Chez vous, partout et ailleurs"
+        opacity={0.6}
+      />
       <Gallery />
     </div>
   );
