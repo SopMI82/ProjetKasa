@@ -24,9 +24,13 @@ const Profile = () => {
         })}
       </div>
 
-      {<Drawer title={"Decription :"} content={house.description} />}
+      <Drawer drawerTitle={"Decription :"} drawerContent={house.description} />
+      <Drawer drawerTitle={"Equipements :"} drawerContent={house.equipments} />
+    
     </div>
   );
 };
 
 export default Profile;
+
+/** */
