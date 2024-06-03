@@ -1,0 +1,39 @@
+.housingCard {
+    height: 340px;
+    width: 340px;
+    // border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: #FFF;
+    /*  Appliquer le dégradé sur la photo... solution à trouver */
+   
+
+
+    img {
+        //display: none;
+        position: relative;
+        justify-self: center;
+        height: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+        &::after{
+            content: "";
+            display: block;
+            background: linear-gradient(#e66465, #9198e5);
+        }
+    }
+
+    p {
+        width: 300px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 1;
+        margin: 20px;
+        color: #FFF;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+    }
+}

@@ -1,12 +1,13 @@
-import './Banner.css';
+import './Banner.scss';
 
-const Banner = () => {
-    return (
-      <div className="banner">
-        <img src=".\src\assets\image.png" alt="Paysage marin" />
-        <p>Chez vous, partout et ailleurs</p>
-      </div>
-    );
+// eslint-disable-next-line react/prop-types
+const Banner = ({imgSource, text, opacity}) => {
+  return (
+    <div className="banner">
+      <img src={imgSource} alt="Photo de paysage" style={{opacity}} />
+      {text && <p>{text}</p>}
+    </div>
+  );
 };
 
 export default Banner;
