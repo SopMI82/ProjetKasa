@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import housings from "../../data/logements.json";
-import Drawer from "../../components/Drawer/Drawer";
+import Collapse from "../../components/Collapse/Collapse";
 import Carousel from "../../components/Carousel/Carousel";
-import Rating from './../../components/Rating/Rating';
+import Rating from "./../../components/Rating/Rating";
 
 const Profile = () => {
   const { id } = useParams();
@@ -18,7 +18,7 @@ const Profile = () => {
           <img src={house.host.picture} alt="photo de ${house.host.name}" />
         </div>
         <div className="star-rating">
-          <Rating rating={house.rating}/>
+          <Rating rating={house.rating} />
         </div>
       </div>
       <div className="tags">
@@ -27,8 +27,14 @@ const Profile = () => {
         })}
       </div>
 
-      <Drawer drawerTitle={"Decription :"} drawerContent={house.description} />
-      <Drawer drawerTitle={"Equipements :"} drawerContent={house.equipments} />
+      <Collapse
+        collapseTitle={"Decription :"}
+        collapseContent={house.description}
+      />
+      <Collapse
+        collapseTitle={"Equipements :"}
+        collapseContent={house.equipments}
+      />
     </div>
   );
 };
