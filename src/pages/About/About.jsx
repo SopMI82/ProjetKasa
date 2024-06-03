@@ -8,7 +8,7 @@ const About = () => {
     <div>
       <Banner
         imgSource=".\kalen-emsley-Bkci_8qcdvQ-unsplash 2.png"
-        opacity={0.3}
+        opacity={0.7}
       />
 
       <Drawer

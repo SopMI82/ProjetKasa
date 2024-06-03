@@ -1,10 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 // eslint-disable-next-line react/prop-types
 const Drawer = ({ drawerTitle = "", drawerContent = "" }) => {
   return (
     <div>
       <div className="overview">
         <h3>{drawerTitle}</h3>
-        <i className="arrow"></i>
+        <button><FontAwesomeIcon icon={faChevronUp} /></button>
       </div>
       <div className="detail">
         {Array.isArray(drawerContent)
@@ -18,7 +21,6 @@ const Drawer = ({ drawerTitle = "", drawerContent = "" }) => {
 };
 
 export default Drawer;
-
 
 /*ici on vérifie si drawerContent est un tableau
 (fonction ajoutée pour la liste des équipements)

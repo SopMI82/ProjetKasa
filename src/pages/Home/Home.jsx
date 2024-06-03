@@ -8,7 +8,7 @@ const Home = () => {
       <Banner
         imgSource=".\src\assets\image.png"
         text="Chez vous, partout et ailleurs"
-        opacity={0.6}
+        opacity={0.4}
       />
       <Gallery />
     </div>
