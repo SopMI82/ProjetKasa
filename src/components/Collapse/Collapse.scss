@@ -10,7 +10,6 @@
     box-sizing: border-box;
     position: relative;
 
-
     .overview {
         width: 100%;
         box-sizing: border-box;
@@ -18,16 +17,21 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        position: absolute;
-        z-index: 1;
         padding: 10px 20px 10px 10px;
         border-radius: 10px;
-        background-color: rgba(255, 96, 96, 1);
+        background-color: #ff6060;
         color: white;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+        transition: border-radius 0.3s ease-in-out;
+        //Animationderotation
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: border-radius 0.3s ease-in-out;
+        -ms-transition: border-radius 0.3s ease-in-out;
+        -o-transition: border-radius 0.3s ease-in-out;
+        -webkit-transition: border-radius 0.3s ease-in-out;
 
         & button {
             color: white;
@@ -35,9 +39,12 @@
             border: none;
             padding: 0;
 
+
             & svg {
                 width: 32px;
                 height: 32px;
+                transition: transform 0.3s ease-in-out; // Animation de rotation
+
             }
         }
 
@@ -51,14 +58,52 @@
     .detail {
         width: 100%;
         box-sizing: border-box;
-        height: 52px;
+        max-height: 0;
+        //Utilisezmax-heightaulieudeheight
         text-align: justify;
         position: relative;
+        background-color: #f6f6f6;
         padding: 10px;
+        //Gardezlepaddingconstant
         overflow: hidden;
+        border-radius: 10px;
         z-index: 0;
         color: black;
         font: normal 400 18px/25px "Montserrat", sans-serif;
+        opacity: 0;
+        //Ajoutezunetransitiond'opacitépouruneffetplusdoux
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        p{
+            margin: 0;
+        }
+    }
+}
+
+.collapse.open {
+    .detail {
+        max-height: 1000px; // Une valeur suffisamment grande pour tout contenu
+        opacity: 1; // Le contenu devient visible
+    }
+
+    .overview {
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        button svg {
+            transform: rotate(-180deg);
+            //Faitpivoterlaflèchede180degrés:;
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+        }
     }
 }
 
