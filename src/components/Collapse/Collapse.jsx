@@ -1,24 +1,28 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import "./Collapse.scss";
 
 // eslint-disable-next-line react/prop-types
 const Collapse = ({ collapseTitle = "", collapseContent = "" }) => {
   return (
-    <div>
-      <div className="overview">
-        <h3>{collapseTitle}</h3>
-        <button>
-          <FontAwesomeIcon icon={faChevronUp} />
-        </button>
-      </div>
-      <div className="detail">
-        {Array.isArray(collapseContent)
-          ? collapseContent.map((item, index) => (
+      <div className="collapse">
+        <div className="overview">
+          <h3>{collapseTitle}</h3>
+          <button>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </button>
+        </div>
+        <div className="detail">
+          {Array.isArray(collapseContent) ? (
+            collapseContent.map((item, index) => (
               <p key={`${collapseTitle}-item-${index}`}>{item}</p>
             ))
-          : collapseContent}
+          ) : (
+            <p>{collapseContent}</p>
+          )}
+        </div>
       </div>
-    </div>
+
   );
 };
 
