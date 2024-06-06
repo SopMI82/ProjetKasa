@@ -1,33 +1,27 @@
 .housingCard {
-    height: 340px;
-    width: 340px;
-    // border: 1px solid black;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 1;
     overflow: hidden;
     position: relative;
+    display: flex; // Changé de block à flex
+    justify-content: center; // Centre horizontalement les éléments enfants
+    align-items: center; // Centre verticalement les éléments enfants (optionnel ici)
     border-radius: 10px;
-    background-color: #FFF;
-    /*  Appliquer le dégradé sur la photo... solution à trouver */
-   
-
+    text-decoration: none;
 
     img {
-        //display: none;
-        position: relative;
-        justify-self: center;
         height: 100%;
-        box-sizing: border-box;
+        width: auto; 
         object-fit: cover;
-        &::after{
-            content: "";
-            display: block;
-            background: linear-gradient(#e66465, #9198e5);
-        }
+        object-position: center; // Centre l'image si elle est plus large que le conteneur
     }
 
     p {
-        width: 300px;
+        width: calc(100% - 40px);
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
+        left: 0;
         z-index: 1;
         margin: 20px;
         color: #FFF;
@@ -35,5 +29,16 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.5) 100%);
     }
 }

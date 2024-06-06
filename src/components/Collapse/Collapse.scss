@@ -14,6 +14,8 @@
         width: 100%;
         box-sizing: border-box;
         height: 52px;
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -33,6 +35,21 @@
         -o-transition: border-radius 0.3s ease-in-out;
         -webkit-transition: border-radius 0.3s ease-in-out;
 
+        &::after {
+            content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%; // Même hauteur que .overview
+                background-color: transparent; 
+                border-radius: inherit; // Hérite du border-radius de .overview
+                opacity: 0;
+                z-index: -1;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
         & button {
             color: white;
             background-color: transparent;
@@ -44,7 +61,6 @@
                 width: 32px;
                 height: 32px;
                 transition: transform 0.3s ease-in-out; // Animation de rotation
-
             }
         }
 
@@ -77,7 +93,8 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-        p{
+
+        p {
             margin: 0;
         }
     }
@@ -96,6 +113,10 @@
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
 
+        &::after {
+            opacity: 1; // Visible quand ouvert
+        }
+
         button svg {
             transform: rotate(-180deg);
             //Faitpivoterlaflèchede180degrés:;
@@ -104,7 +125,11 @@
             -ms-transform: rotate(-180deg);
             -o-transform: rotate(-180deg);
         }
+
+
     }
+
+
 }
 
 /*
