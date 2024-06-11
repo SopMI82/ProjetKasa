@@ -44,6 +44,7 @@
                     font-size: 14px;
                     font-weight: 700;
                     text-align: center;
+                    line-height: 25px;
                     -webkit-border-radius: 10px;
                     -moz-border-radius: 10px;
                     -ms-border-radius: 10px;
@@ -58,6 +59,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: end;
 
             .host {
                 height: 33px;
@@ -66,8 +68,8 @@
 
                 p {
                     color: rgba(255, 96, 96, 1);
+                    width: 50%;
                     text-align: right;
-                    margin: auto;
                     line-height: normal;
                 }
 
