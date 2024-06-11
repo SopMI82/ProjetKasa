@@ -17,3 +17,17 @@
     }
 
 }
+
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .star-rating {
+        width: 100px;
+            .fillStar {
+                    width: 18px;
+                }
+            
+                .emptyStar {
+                    width: 18px;
+                }
+    }
+}

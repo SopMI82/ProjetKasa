@@ -12,26 +12,29 @@ const Profile = () => {
     <div className="profile">
       <Carousel listPic={house.pictures} />
 
-      <div className="containerHouseHost">
-        <div className="informations">
-          <div></div>
+      <div className="informations">
+        <div className="leftInformations">
           <h2>{house.title}</h2>
           <p>{house.location}</p>
+          <div className="tags">
+            {house.tags.map((tag, index) => {
+              return (
+                <div className="tag" key={`${house.id}-tag-${index}`}>
+                  {tag}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div className="host">
-          <p>{house.host.name}</p>
-          <img src={house.host.picture} alt="photo de ${house.host.name}" />
-        </div>
-      </div>
 
-      <div className="containerTagRate">
-        <div className="tags">
-          {house.tags.map((tag, index) => {
-            return <div className="tag" key={`${house.id}-tag-${index}`}>{tag}</div>;
-          })}
-        </div>
-        <div className="star-rating">
-          <Rating rating={house.rating} />
+        <div className="righInformations">
+          <div className="host">
+            <p>{house.host.name}</p>
+            <img src={house.host.picture} alt="photo de ${house.host.name}" />
+          </div>
+          <div className="star-rating">
+            <Rating rating={house.rating} />
+          </div>
         </div>
       </div>
 
@@ -50,5 +53,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-/* */

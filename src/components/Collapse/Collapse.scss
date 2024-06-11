@@ -18,6 +18,7 @@
         z-index: 2;
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         padding: 10px 20px 10px 10px;
         border-radius: 10px;
@@ -37,17 +38,17 @@
 
         &::after {
             content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 100%; // Même hauteur que .overview
-                background-color: transparent; 
-                border-radius: inherit; // Hérite du border-radius de .overview
-                opacity: 0;
-                z-index: -1;
-                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-                transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%; // Même hauteur que .overview
+            background-color: transparent;
+            border-radius: inherit; // Hérite du border-radius de .overview
+            opacity: 0;
+            z-index: -1;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
         & button {
@@ -65,7 +66,7 @@
         }
 
         & h3 {
-            font: normal 700 18px/25px "Montserrat", sans-serif;
+            font: normal 700 18px "Montserrat", sans-serif;
             margin: 0;
             align-self: center;
         }
@@ -75,33 +76,34 @@
         width: 100%;
         box-sizing: border-box;
         max-height: 0;
-        //Utilisezmax-heightaulieudeheight
-        text-align: justify;
+        //Utilisezmax-heightaulieudeheighttext-align: justify;
         position: relative;
-        background-color: #f6f6f6;
-        padding: 10px;
-        //Gardezlepaddingconstant
-        overflow: hidden;
-        border-radius: 10px;
+        //Gardezlepaddingconstantoverflow: hidden;
         z-index: 0;
         color: black;
-        font: normal 400 18px/25px "Montserrat", sans-serif;
+        font: normal 400 18px "Montserrat", sans-serif;
         opacity: 0;
-        //Ajoutezunetransitiond'opacitépouruneffetplusdoux
-        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        //Ajoutezunetransitiond'opacitépouruneffetplusdouxtransition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-
-        p {
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -moz-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -ms-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -o-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        p{
             margin: 0;
+            text-justify: distribute-all-lines;
         }
     }
 }
 
 .collapse.open {
     .detail {
+        padding: 10px 10px 10px 10px;
         max-height: 1000px; // Une valeur suffisamment grande pour tout contenu
         opacity: 1; // Le contenu devient visible
     }

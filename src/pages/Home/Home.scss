@@ -5,10 +5,17 @@
     flex-direction: column;
     margin: 50px auto 50px auto;
     gap: 50px;
-
 }
 
 .app {
     display: flex;
     flex-direction: column;
+}
+
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .container {
+        margin: 27px auto 0px auto;
+        gap: 22px;
+    }
 }

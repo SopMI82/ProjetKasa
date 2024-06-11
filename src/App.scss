@@ -1,0 +1,13 @@
+.app {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: auto;
+}
+
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .app {
+            padding: 20px;
+        }
+}

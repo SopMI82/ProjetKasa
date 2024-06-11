@@ -6,7 +6,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+            justify-content: space-around;
     align-items: center;
     font-family: "Montserrat", sans-serif;
 }
@@ -33,3 +33,39 @@
     font-weight: 500;
     text-decoration-line: underline;
 }
+
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .erreur404 {
+            width: 100%;
+            padding: 25% 10%;
+            position: relative;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 100px;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+        }
+    
+        .erreur404 h2 {
+            font-size: 96px;
+        }
+    
+        .erreur404 p {
+            display: flex;
+            color: #FF6060;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+        }
+    
+        .erreur404 a {
+            display: flex;
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration-line: underline;
+}}

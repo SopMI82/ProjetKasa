@@ -4,85 +4,178 @@
     padding: 50px 0;
     display: flex;
     flex-direction: column;
-    font: normal 500 18px/25px "Montserrat",
-        sans-serif;
+    font: normal 500 18px "Montserrat", sans-serif;
     gap: 30px;
 
-    .containerHouseHost {
+    .informations {
         width: 100%;
         box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
 
-        .informations {
-            width: 100%;
+        .leftInformations {
+            width: 80%;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
 
             h2 {
                 color: rgba(255, 96, 96, 1);
-                font-size: 36px/50px;
+                font-size: 36px;
                 font-weight: 500;
                 margin: 0px;
             }
 
+            .tags {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                gap: 10px;
+
+                .tag {
+                    box-sizing: border-box;
+                    min-width: 115px;
+                    padding: 0 10px;
+                    width: fit-content;
+                    height: 25px;
+                    border-radius: 10px;
+                    color: white;
+                    background-color: rgba(255, 96, 96, 1);
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-align: center;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+                }
+            }
         }
 
-        .host {
-        display: flex;
-           gap: 10px;
+        .righInformations {
+            width: 20%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-            p {
-                color: rgba(255, 96, 96, 1);
-                text-align: right;
-                margin: auto;
-            }
+            .host {
+                height: 33px;
+                display: flex;
+                gap: 10px;
 
-            img {
-                width: 64px;
-                height: 64px;
-                margin: auto;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
+                p {
+                    color: rgba(255, 96, 96, 1);
+                    text-align: right;
+                    margin: auto;
+                    line-height: normal;
+                }
+
+                img {
+                    width: 64px;
+                    height: 64px;
+                    margin: auto;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                }
             }
         }
     }
+}
 
-    .containerTagRate {
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .profile {
+        gap: 20px;
 
-        .tags {
-            width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            gap: 10px;
+        .informations {
+            flex-direction: column;
+            gap: 20px;
 
-            .tag {
-                box-sizing: border-box;
-                min-width: 115px;
-                padding: 0 10px;
-                width: fit-content;
-                height: 25px;
-                border-radius: 10px;
-                color: white;
-                background-color: rgba(255, 96, 96, 1);
-                font-size: 14px;
-                font-weight: 700;
-                text-align: center;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
-                -o-border-radius: 10px;
+            .leftInformations {
+                width: 100%;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin: 10px 0;
+                }
+
+                .tags {
+                    width: 100%;
+                    flex-wrap: wrap;
+
+                    .tag {
+                        min-width: 84px;
+                        height: 18px;
+                        font-size: 10px;
+                        line-height: 18px;
+                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                    }
+                }
+            }
+
+            .righInformations {
+                width: 100%;
+                flex-direction: row-reverse;
+                align-items: center;
+
+                .host {
+                    align-items: center;
+                    justify-content: right;
+
+                    p {
+                        width: 60%;
+                        margin: 0;
+                        font-size: 12px;
+                    }
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        margin: 0;
+                    }
+                }
             }
         }
 
+        .collapseContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
+            .overview {
+                width: 100%;
+                height: 30px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+
+            h3 {
+                font-size: 13px;
+            }
+
+            button svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
     }
 }

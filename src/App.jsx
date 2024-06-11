@@ -5,6 +5,7 @@ import Profile from "./pages/Profile/Profile";
 import Error404 from "./pages/Error404/Error404";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import "./App.scss";
 
 function App() {
   return (
