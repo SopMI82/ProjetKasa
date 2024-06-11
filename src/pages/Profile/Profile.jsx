@@ -3,11 +3,20 @@ import housings from "../../data/logements.json";
 import Collapse from "../../components/Collapse/Collapse";
 import Carousel from "../../components/Carousel/Carousel";
 import Rating from "./../../components/Rating/Rating";
+import Error404 from "../Error404/Error404";
 import "./Profile.scss";
 
 const Profile = () => {
   const { id } = useParams();
   const house = housings.find((housing) => housing.id === id);
+  const isValidId = (id) => {
+    return housings.some((housing) => housing.id === id);
+  };
+
+  if (!isValidId(id)) {
+    return <Error404 />;
+  }
+
   return (
     <div className="profile">
       <Carousel listPic={house.pictures} />

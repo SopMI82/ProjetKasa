@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/profile/:id" element={<Profile />} />
           <Route path="/*" element={<Error404 />} />
+          <Route path="/profile/:id" element={<Profile />} />
         </Routes>
         <Footer />
       </BrowserRouter>
