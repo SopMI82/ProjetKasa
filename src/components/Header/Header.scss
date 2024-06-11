@@ -3,6 +3,7 @@ header {
     max-width: 1240px;
     height: 68px;
     padding-top: 45px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -12,8 +13,15 @@ header img {
     height: 68px;
 }
 
-.app {
-    width: 100%;
-    max-width: 1240px;
-    margin: auto;
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+header {
+padding: 0;
+height: auto;
+    }
+
+    header img {
+        width: 145px;
+        height: 47px;
+    }
 }

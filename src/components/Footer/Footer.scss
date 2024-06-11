@@ -1,20 +1,39 @@
 footer {
     width: 99vw;
+    position: relative;
     padding-top: 66px;
-    padding-bottom: 29px;
+    padding-bottom: 30px;
     flex-direction: column;
     gap: 28px;
     align-self: center;
     align-items: center;
     background: #000;
     display: flex;
+
+    p {
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0;
+    }
 }
 
-footer p {
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    margin: 0;
-}
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    footer {
+        padding-bottom: 66px;
+        bottom: -20px;
+        img {
+            width: 134px;
+            height: auto;
+        }
 
+        p {
+            font-size: 12px;
+            width: 134px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}

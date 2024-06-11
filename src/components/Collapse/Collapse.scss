@@ -1,0 +1,156 @@
+.collapseContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.collapse {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+    .overview {
+        width: 100%;
+        box-sizing: border-box;
+        height: 52px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px 10px 10px;
+        border-radius: 10px;
+        background-color: #ff6060;
+        color: white;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: border-radius 0.3s ease-in-out;
+        //Animationderotation
+        -webkit-transition: transform 0.3s ease-in-out;
+        -moz-transition: border-radius 0.3s ease-in-out;
+        -ms-transition: border-radius 0.3s ease-in-out;
+        -o-transition: border-radius 0.3s ease-in-out;
+        -webkit-transition: border-radius 0.3s ease-in-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%; // Même hauteur que .overview
+            background-color: transparent;
+            border-radius: inherit; // Hérite du border-radius de .overview
+            opacity: 0;
+            z-index: -1;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        & button {
+            color: white;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+
+
+            & svg {
+                width: 32px;
+                height: 32px;
+                transition: transform 0.3s ease-in-out; // Animation de rotation
+            }
+        }
+
+        & h3 {
+            font: normal 700 18px "Montserrat", sans-serif;
+            margin: 0;
+            align-self: center;
+        }
+    }
+
+    .detail {
+        width: 100%;
+        box-sizing: border-box;
+        max-height: 0;
+        //Utilisezmax-heightaulieudeheighttext-align: justify;
+        position: relative;
+        //Gardezlepaddingconstantoverflow: hidden;
+        z-index: 0;
+        color: black;
+        font: normal 400 18px "Montserrat", sans-serif;
+        opacity: 0;
+        //Ajoutezunetransitiond'opacitépouruneffetplusdouxtransition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -moz-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -ms-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        -o-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        p{
+            margin: 0;
+            text-justify: distribute-all-lines;
+        }
+    }
+}
+
+.collapse.open {
+    .detail {
+        padding: 10px 10px 10px 10px;
+        max-height: 1000px; // Une valeur suffisamment grande pour tout contenu
+        opacity: 1; // Le contenu devient visible
+    }
+
+    .overview {
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        &::after {
+            opacity: 1; // Visible quand ouvert
+        }
+
+        button svg {
+            transform: rotate(-180deg);
+            //Faitpivoterlaflèchede180degrés:;
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+        }
+
+
+    }
+
+
+}
+
+/*
+.open {
+    display: flex;
+    flex-direction: column;
+
+    .overview {
+                height: 32px;
+                position: relative;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+}
+
+    .detail {
+        height: fit-content;
+        overflow: auto;
+    }
+}*/

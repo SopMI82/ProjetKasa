@@ -6,6 +6,23 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     padding: 50px;
-    gap: 60px;
+    gap: 2.5em;
 }
 
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .galery {
+        width: auto;
+        border-radius: 0px;
+        background: transparent;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 0 20px 0;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        gap: 22px;
+    }
+}

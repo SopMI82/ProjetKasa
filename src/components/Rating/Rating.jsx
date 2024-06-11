@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid } from "@fortawesome/free-solid-svg-icons";
-import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
+import "./Rating.scss";
 
 // eslint-disable-next-line react/prop-types
 const Rating = ({ rating }) => {
@@ -10,7 +10,7 @@ const Rating = ({ rating }) => {
   const stars = starRating.map((index) => (
     <FontAwesomeIcon
       key={index}
-      icon={index < rating ? faStarSolid : faStarRegular}
+      icon={index < rating ? faStarSolid : faStarSolid}
       className={index < rating ? "fillStar" : "emptyStar"}
     />
   ));

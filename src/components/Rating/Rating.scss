@@ -1,0 +1,33 @@
+.star-rating {
+    width: 196px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+
+    .fillStar {
+        color: rgba(255, 96, 96, 1);
+        width: 25px;
+        height: 25px;
+    }
+
+    .emptyStar {
+        color: rgba(246, 246, 246, 1);
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .star-rating {
+        width: 100px;
+            .fillStar {
+                    width: 18px;
+                }
+            
+                .emptyStar {
+                    width: 18px;
+                }
+    }
+}

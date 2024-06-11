@@ -1,0 +1,83 @@
+.carousel {
+    width: 100%;
+    height: 415px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    & img {
+        width: 100%;
+        box-sizing: border-box;
+        object-fit: cover;
+
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
+    button {
+        color: white;
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1;
+        position: absolute;
+
+        & svg {
+            width: 96px;
+            height: 120px;
+        }
+    }
+
+    .btnPrevious {
+        left: 25px;
+    }
+
+    .btnNext {
+        right: 25px;
+    }
+
+    .picsCount {
+        color: white;
+        font: normal 500 18px "Montserrat", sans-serif;
+        z-index: 1;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+
+/*Media Queries Mobile <768px (tailles XS, SM)*/
+@media (max-width: 768px) {
+    .carousel {
+            height: 255px;
+    
+            & img {
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+}
+    
+            button svg {
+                    width: 24px;
+                    height: 24px;
+                }
+            
+    
+            .btnPrevious {
+                left: 0px;
+            }
+    
+            .btnNext {
+                right: 0px;
+            }
+    
+            .picsCount {
+                display: none;
+            }
+        }}
