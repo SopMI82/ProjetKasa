@@ -4,14 +4,14 @@ import "./Home.scss";
 
 const Home = () => {
   return (
-    <div className="container">
+    <main className="container">
       <Banner
-        imgSource=".\src\assets\image.png"
+        imgSource="./image.png"
         text="Chez vous, partout et ailleurs"
         opacity={0.4}
       />
       <Gallery />
-    </div>
+    </main>
   );
 };
 

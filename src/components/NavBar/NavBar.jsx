@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import './NavBar.scss';
 
+/**
+ * Fonction qui gère le menu de navigation
+ */
 const NavBar = () => {
     return (
       <nav>

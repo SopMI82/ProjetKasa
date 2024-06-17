@@ -4,9 +4,9 @@ import "./About.scss";
 
 const About = () => {
   return (
-    <div className="about">
+    <main className="about">
       <Banner
-        imgSource=".\kalen-emsley-Bkci_8qcdvQ-unsplash 2.png"
+        imgSource="./kalen-emsley-Bkci_8qcdvQ-unsplash2.png"
         opacity={0.7}
       />
         <Collapse
@@ -33,7 +33,7 @@ const About = () => {
             "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
           }
         />{" "}
-    </div>
+    </main>
   );
 };
 
