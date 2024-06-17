@@ -1,5 +1,8 @@
 import "./Footer.scss"
 
+/**
+ * Fonction qui permet d'intégrer le footer de la page
+ */
 const Footer = () => {
     return (
       <footer>

@@ -21,20 +21,18 @@
         align-items: center;
         justify-content: space-between;
         padding: 10px 20px 10px 10px;
-        border-radius: 10px;
         background-color: #ff6060;
         color: white;
+        border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
         transition: border-radius 0.3s ease-in-out;
-        //Animationderotation
         -webkit-transition: transform 0.3s ease-in-out;
         -moz-transition: border-radius 0.3s ease-in-out;
         -ms-transition: border-radius 0.3s ease-in-out;
         -o-transition: border-radius 0.3s ease-in-out;
-        -webkit-transition: border-radius 0.3s ease-in-out;
 
         &::after {
             content: '';
@@ -42,26 +40,25 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 100%; // Même hauteur que .overview
+            height: 100%;
             background-color: transparent;
-            border-radius: inherit; // Hérite du border-radius de .overview
+            border-radius: inherit;
             opacity: 0;
             z-index: -1;
             box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
 
-        & button {
+        & span {
             color: white;
             background-color: transparent;
             border: none;
             padding: 0;
 
-
             & svg {
                 width: 32px;
                 height: 32px;
-                transition: transform 0.3s ease-in-out; // Animation de rotation
+                transition: transform 0.3s ease-in-out;
             }
         }
 
@@ -76,14 +73,12 @@
         width: 100%;
         box-sizing: border-box;
         max-height: 0;
-        //Utilisezmax-heightaulieudeheighttext-align: justify;
+        text-align: justify;
         position: relative;
-        //Gardezlepaddingconstantoverflow: hidden;
         z-index: 0;
         color: black;
         font: normal 400 18px "Montserrat", sans-serif;
         opacity: 0;
-        //Ajoutezunetransitiond'opacitépouruneffetplusdouxtransition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
@@ -104,8 +99,8 @@
 .collapse.open {
     .detail {
         padding: 10px 10px 10px 10px;
-        max-height: 1000px; // Une valeur suffisamment grande pour tout contenu
-        opacity: 1; // Le contenu devient visible
+        max-height: 1000px;
+        opacity: 1;
     }
 
     .overview {
@@ -116,41 +111,15 @@
         -o-border-radius: 5px;
 
         &::after {
-            opacity: 1; // Visible quand ouvert
+            opacity: 1;
         }
 
-        button svg {
-            transform: rotate(-180deg);
-            //Faitpivoterlaflèchede180degrés:;
+        span svg {
+            transform: rotate(-180deg); //Fait pivoter la flèche de 180 degrés
             -webkit-transform: rotate(-180deg);
             -moz-transform: rotate(-180deg);
             -ms-transform: rotate(-180deg);
             -o-transform: rotate(-180deg);
         }
-
-
     }
-
-
 }
-
-/*
-.open {
-    display: flex;
-    flex-direction: column;
-
-    .overview {
-                height: 32px;
-                position: relative;
-                border-radius: 5px;
-                -webkit-border-radius: 5px;
-                -moz-border-radius: 5px;
-                -ms-border-radius: 5px;
-                -o-border-radius: 5px;
-}
-
-    .detail {
-        height: fit-content;
-        overflow: auto;
-    }
-}*/
