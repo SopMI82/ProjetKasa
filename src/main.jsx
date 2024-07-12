@@ -26,12 +26,19 @@ const router = createBrowserRouter([
       {
         path: "profile/:id",
         element: <Profile />,
+        errorElement: <ErrorBoundary />,
       },
+      {
+        path: "*",
+        element: <ErrorBoundary />,
+      },
+
     ],
   },
   {
     path: "*",
-    element: <ErrorBoundary />,
+    element: <Layout />,
+    errorElement: <ErrorBoundary />,
   },
 ]);
 
