@@ -41,7 +41,7 @@ const Profile = () => {
 
       <div className="collapseContainer">
         <Collapse
-          collapseTitle={"Decription :"}
+          collapseTitle={"Description :"}
           collapseContent={house.description}
         />
         <Collapse

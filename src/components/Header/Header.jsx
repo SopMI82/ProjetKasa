@@ -1,4 +1,6 @@
 import NavBar from "../NavBar/NavBar";
+import Logo from "../../../public/LOGO.svg";
+
 import './Header.scss';
 
 /**
@@ -7,7 +9,7 @@ import './Header.scss';
 const Header = () => {
     return (
       <header>
-        <img src="./LOGO.svg" alt="logo Kasa" />
+        <img src={Logo} alt="logo Kasa" />
         <NavBar />
       </header>
     );
